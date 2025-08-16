@@ -1,21 +1,28 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Login - Pahana Edu</title>
+  <meta charset="UTF-8" />
+  <title>Login — Pahana Billing</title>
+  <link rel="stylesheet" href="<c:url value='/assets/css/styles.css'/>">
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="${pageContext.request.contextPath}/login" method="post">
-  <input type="text"     name="username" required />
-  <input type="password" name="password" required />
-  <button type="submit">Login</button>
-  <c:if test="${not empty error}">
-    <div class="error">${error}</div>
-  </c:if>
-</form>
-    
-    
+  <div class="auth-wrap">
+    <h1>Pahana Billing</h1>
+    <form method="post" action="<c:url value='/login'/>" class="card narrow">
+      <label>Username
+        <input type="text" name="username" required>
+      </label>
+      <label>Password
+        <input type="password" name="password" required>
+      </label>
+      <button type="submit">Sign in</button>
+
+      <c:if test="${not empty error}">
+        <p class="error">${error}</p>
+      </c:if>
+    </form>
+  </div>
 </body>
 </html>

@@ -5,12 +5,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-@WebServlet(name = "LogoutController", urlPatterns = {"/logout"})
-public class LogoutController extends HttpServlet {
+@WebServlet(name = "AdminDashbordController", urlPatterns = {"/admin"})
+public class AdminDashbordController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession s = req.getSession(false);
-        if (s != null) s.invalidate();
-        resp.sendRedirect(req.getContextPath() + "/login");
+        req.getRequestDispatcher("/adminDashboard.jsp").forward(req, resp);
     }
 }

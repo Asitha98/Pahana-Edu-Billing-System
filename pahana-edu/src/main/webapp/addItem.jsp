@@ -4,19 +4,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Add Customer — Pahana Billing</title>
+  <title>Add Item — Pahana Billing</title>
   <link rel="stylesheet" href="<c:url value='/assets/css/styles.css'/>">
 </head>
 <body>
   <jsp:include page="header.jsp"/>
   <div class="container">
-    <h1>Add Customer</h1>
-    <form method="post" action="<c:url value='/customer/add'/>" class="card narrow">
-      <label>Account No <input name="account_no" required></label>
+    <h1>Add Item</h1>
+    <form method="post" action="<c:url value='/item/add'/>" class="card narrow">
+      <label>SKU <input name="sku" required></label>
       <label>Name <input name="name" required></label>
-      <label>Address <input name="address"></label>
-      <label>Phone <input name="phone"></label>
-      <label>Units <input type="number" name="units" min="0" value="0"></label>
+      <label>Unit Price <input type="number" step="0.01" name="unit_price" required></label>
       <button type="submit">Save</button>
     </form>
   </div>
