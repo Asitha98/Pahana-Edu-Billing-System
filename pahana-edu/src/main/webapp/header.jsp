@@ -7,6 +7,7 @@
     <a href="<c:url value='/customers'/>">Customers</a>
     <a href="<c:url value='/items'/>">Items</a>
     <a href="<c:url value='/bills'/>">Bills</a>
+    <a href="<c:url value='/help.jsp'/>">Help</a>
     <a href="<c:url value='/logout'/>">Logout</a>
   </nav>
 </div>

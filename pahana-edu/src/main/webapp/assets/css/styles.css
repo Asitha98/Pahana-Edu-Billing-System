@@ -53,3 +53,11 @@ th,td{padding:10px 12px; border-bottom:1px solid var(--line); text-align:left; w
 }
 .error{color:var(--danger); margin-top:10px}
 .actions form{display:inline}
+
+.code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+        background:#0b1019; border:1px solid var(--line); padding:2px 6px; border-radius:6px }
+.note { color: var(--muted); font-size: 0.95rem }
+.faq { margin: 8px 0 }
+.faq > summary { cursor: pointer; font-weight: 700; padding: 6px 0 }
+.faq > div { margin: 6px 0 0 0; color: var(--muted) }
+
