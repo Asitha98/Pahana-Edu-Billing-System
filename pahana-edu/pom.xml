@@ -51,14 +51,13 @@
 <version>8.4.0</version>
 <scope>runtime</scope>
 </dependency>
-<!--  Testing  -->
 <dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>4.13.2</version>
+<groupId>org.junit.jupiter</groupId>
+<artifactId>junit-jupiter</artifactId>
+<version>5.10.2</version>
 <scope>test</scope>
 </dependency>
-<!--  Mockito (Java 8 compatible)  -->
+<!--  Mockito still fine if you need it  -->
 <dependency>
 <groupId>org.mockito</groupId>
 <artifactId>mockito-core</artifactId>
@@ -103,6 +102,10 @@
 <plugin>
 <artifactId>maven-deploy-plugin</artifactId>
 <version>3.1.2</version>
+</plugin>
+<plugin>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>3.3.0</version>
 </plugin>
 </plugins>
 </build>
